@@ -12,6 +12,10 @@ app.get("/", (req, res) => {
     res.render("home");
 })
 
+app.get("/rolldice", (req, res) => {
+    res.send("hello");
+})
+
 app.listen(port, () => {
     console.log(`Server is listening at ${port}`);
 });
