@@ -13,6 +13,14 @@
     </h1>
     <button>Follow</button>
     <button>Message</button>
+    <h3>The followers for this page are: </h3>
+    <ul>
+        <% for(let name of followers) { %>
+            <li>
+                <%= name %>
+            </li>
+            <% } %>
+    </ul>
 </body>
 
 </html>

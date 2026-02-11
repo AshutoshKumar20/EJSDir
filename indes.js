@@ -7,7 +7,7 @@ const port = 8080;
 app.set("view engine", "ejs");
 
 //app.set("views", path.join(__dirname, "/views"));
-
+const followers = ["Raj", "Aman", "Ritik", "Vishal"];
 app.get("/", (req, res) => {
     res.render("home");
 })
@@ -19,7 +19,7 @@ app.get("/rolldice", (req, res) => {
 
 app.get("/ig/:username", (req, res) => {
     let { username } = req.params;
-    res.render("instagram.ejs", { username })
+    res.render("instagram.ejs", { username, followers })
 })
 
 app.listen(port, () => {
